@@ -1,0 +1,6 @@
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Release/netcoreapp3.1/publish/appsettings.Development.json
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Release/netcoreapp3.1/publish/appsettings.json
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Release/netcoreapp3.1/publish/backend_dockerAPI.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Release/netcoreapp3.1/publish/backend_dockerAPI.deps.json
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Release/netcoreapp3.1/publish/backend_dockerAPI.runtimeconfig.json
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Release/netcoreapp3.1/publish/backend_dockerAPI.pdb
