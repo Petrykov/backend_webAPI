@@ -1,6 +1,5 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.1 AS runtime
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS base
 WORKDIR /app
-COPY /out ./
+COPY . .
 
-ENV ASPNETCORE_URLS http://*:$PORT
-ENTRYPOINT ["dotnet","backend_dockerAPI.dll"]
+CMD /bin/sh -c ASPNETCORE_URLS\=http://\*:\$PORT\ dotnet\ backend_dockerAPI
