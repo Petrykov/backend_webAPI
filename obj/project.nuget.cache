@@ -1,8 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "XT0W9N8fSGmZOmVe82wrpNOZvOtWvVALyBEy6EEAxbUXcIc9tOwbTGA62Ui7Lsiq2g51WObfTxVFfQC5JusyXg==",
+  "dgSpecHash": "gtpRaP5D9InfFc1qY5aS2pciwMzSe9wea3wgNoAg0s9t+f/czhoPgLw0LY+HheVBg+2Qthyx3UCXlDxFp0c2Xg==",
   "success": true,
   "projectFilePath": "/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/backend_dockerAPI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/mac/.nuget/packages/dnsclient/1.4.0/dnsclient.1.4.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.netcore.platforms/2.1.2/microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "/Users/mac/.nuget/packages/mongodb.bson/2.13.1/mongodb.bson.2.13.1.nupkg.sha512",
+    "/Users/mac/.nuget/packages/mongodb.driver/2.13.1/mongodb.driver.2.13.1.nupkg.sha512",
+    "/Users/mac/.nuget/packages/mongodb.driver.core/2.13.1/mongodb.driver.core.2.13.1.nupkg.sha512",
+    "/Users/mac/.nuget/packages/mongodb.libmongocrypt/1.2.2/mongodb.libmongocrypt.1.2.2.nupkg.sha512",
+    "/Users/mac/.nuget/packages/sharpcompress/0.23.0/sharpcompress.0.23.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
+    "/Users/mac/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/system.text.encoding.codepages/4.5.1/system.text.encoding.codepages.4.5.1.nupkg.sha512"
+  ],
   "logs": []
 }
