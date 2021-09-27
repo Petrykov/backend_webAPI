@@ -17,6 +17,4 @@ RUN dotnet publish "backend_dockerAPI.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-# The below is commented and the line after is used when in heroku
-# ENTRYPOINT ["dotnet", "dotnetcore31heroku.dll"]
 CMD ASPNETCORE_URLS=http://*:$PORT dotnet backend_dockerAPI.dll
