@@ -32,3 +32,8 @@
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/runtimes/osx/native/libmongocrypt.dylib
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/runtimes/win/native/mongocrypt.dll
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.csproj.CopyComplete
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/microsoft.identitymodel.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll

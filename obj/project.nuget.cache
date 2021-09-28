@@ -1,10 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "gtpRaP5D9InfFc1qY5aS2pciwMzSe9wea3wgNoAg0s9t+f/czhoPgLw0LY+HheVBg+2Qthyx3UCXlDxFp0c2Xg==",
+  "dgSpecHash": "FUDAofH5WUYK5au4Ea53FWOOE0sALUEvAVBE8XEx/o3A/4j1aDfaCUkJ0nsR6Uh4AJOCG6Ynz2RPkZhiUGjIRQ==",
   "success": true,
   "projectFilePath": "/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/backend_dockerAPI.csproj",
   "expectedPackageFiles": [
     "/Users/mac/.nuget/packages/dnsclient/1.4.0/dnsclient.1.4.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.identitymodel/7.0.0/microsoft.identitymodel.7.0.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.12.2/microsoft.identitymodel.jsonwebtokens.6.12.2.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.identitymodel.logging/6.12.2/microsoft.identitymodel.logging.6.12.2.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.identitymodel.tokens/6.12.2/microsoft.identitymodel.tokens.6.12.2.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.netcore.platforms/2.1.2/microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "/Users/mac/.nuget/packages/mongodb.bson/2.13.1/mongodb.bson.2.13.1.nupkg.sha512",
     "/Users/mac/.nuget/packages/mongodb.driver/2.13.1/mongodb.driver.2.13.1.nupkg.sha512",
@@ -12,8 +17,21 @@
     "/Users/mac/.nuget/packages/mongodb.libmongocrypt/1.2.2/mongodb.libmongocrypt.1.2.2.nupkg.sha512",
     "/Users/mac/.nuget/packages/sharpcompress/0.23.0/sharpcompress.0.23.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
+    "/Users/mac/.nuget/packages/system.identitymodel.tokens.jwt/6.12.2/system.identitymodel.tokens.jwt.6.12.2.nupkg.sha512",
     "/Users/mac/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/system.text.encoding.codepages/4.5.1/system.text.encoding.codepages.4.5.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.IdentityModel 7.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.IdentityModel",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }
