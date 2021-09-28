@@ -13,7 +13,7 @@ namespace backend_dockerAPI.Services
     public class UserService
     {
         private readonly IMongoCollection <Client> users;
-        private readonly string key;
+        private string key;
 
         public UserService(IMongoClient client, IConfiguration configuration)
         {
@@ -34,7 +34,7 @@ namespace backend_dockerAPI.Services
 
         public string Authenticate(string name, string password)
         {
-            var client = users.Find(x => x.Name == name && x.Password == password).FirstOrDefault();
+            var client = this.users.Find(x => x.Name == name && x.Password == password).FirstOrDefault();
 
             if(client == null)
                 return null;
