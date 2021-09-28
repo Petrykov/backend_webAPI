@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using backend_dockerAPI.Services;
 using backend_web_api.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend_dockerAPI.Controllers
 {
-    [Route("api/clients")]
+    [Authorize]
+    [Route("api/[controller]")]
     [ApiController]
     public class ClientController : Controller
     {
@@ -14,6 +16,18 @@ namespace backend_dockerAPI.Controllers
         public ClientController(UserService _service)
         {
             service = _service;
+        }
+
+        [AllowAnonymous]
+        [Route("authenticate")]
+        [HttpPost]
+        public ActionResult Login([FromBody] Client client)
+        {
+            var token = service.Authenticate(client.Name, client.Password);
+            if (token == null)
+                return Unauthorized();
+
+            return Ok(new { token, client });
         }
 
         [HttpGet]

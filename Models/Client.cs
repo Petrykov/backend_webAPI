@@ -10,12 +10,12 @@ namespace backend_web_api.Models
         public string id { get; set; }
         
         [BsonElement("Name")]
-        public string name { get; set; }
+        public string Name { get; set; }
 
         [BsonElement("Login")]
-        public string login { get; set; }
+        public string Login { get; set; }
 
         [BsonElement("Password")]
-        public string password { get; set; }
+        public string Password { get; set; }
     }
 }
