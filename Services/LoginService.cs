@@ -1,42 +1,34 @@
 using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using backend_web_api.Models;
+using backend_dockerAPI.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
 
 namespace backend_dockerAPI.Services
 {
-    public class UserService
+    public class LoginService
     {
-        private readonly IMongoCollection <Client> users;
-        private string key;
+        private readonly IMongoCollection <Developer> developers;
+        private readonly IMongoCollection <Company> companies;
+        private readonly string key;
 
-        public UserService(IMongoClient client, IConfiguration configuration)
+        public LoginService(IMongoClient client, IConfiguration configuration)
         {
-            var database = client.GetDatabase("BookstoreDb");
-            users = database.GetCollection<Client>("Clients");
+            var database = client.GetDatabase("AdvancedAppDevelopment");
+            developers = database.GetCollection<Developer>("Developers");
+            companies = database.GetCollection<Company>("Companies");
             this.key = configuration.GetSection("JwtKey").ToString();
         }
 
-        public List<Client> GetUsers() => users.Find(user => true).ToList();
-
-        public Client GetUser(string id) => users.Find<Client>(user => user.id == id).FirstOrDefault();
-
-        public Client Create(Client client)
+        public string Authenticate(string email, string password)
         {
-            users.InsertOne(client);
-            return client;
-        }
+            var developer = developers.Find(x => x.Email == email && x.Password == password).FirstOrDefault();
+            var company = companies.Find(x => x.Email == email && x.Password == password).FirstOrDefault();
 
-        public string Authenticate(string name, string password)
-        {
-            var client = this.users.Find(x => x.Name == name && x.Password == password).FirstOrDefault();
-
-            if(client == null)
+            if(developer == null && company == null)
                 return null;
 
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -45,7 +37,7 @@ namespace backend_dockerAPI.Services
 
             var tokenDescriptor = new SecurityTokenDescriptor() {
                 Subject = new ClaimsIdentity(new Claim[]{
-                    new Claim(ClaimTypes.Name, name),
+                    new Claim(ClaimTypes.Email, email),
                 }),
 
                 Expires = DateTime.UtcNow.AddHours(1),
@@ -57,7 +49,6 @@ namespace backend_dockerAPI.Services
             };
             
             var token = tokenHandler.CreateToken(tokenDescriptor);
-
             return tokenHandler.WriteToken(token);
         }
     }

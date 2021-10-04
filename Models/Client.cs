@@ -7,15 +7,10 @@ namespace backend_web_api.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string id { get; set; }
-        
-        [BsonElement("Name")]
-        public string Name { get; set; }
-
-        [BsonElement("Login")]
-        public string Login { get; set; }
-
-        [BsonElement("Password")]
+        public string Id { get; set; }
+        public string Email { get; set; }
         public string Password { get; set; }
+        public string Name { get; set; }
+        public string Img { get; set; }
     }
 }

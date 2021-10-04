@@ -55,7 +55,9 @@ namespace backend_dockerAPI
                 };
             });
 
-            services.AddScoped<UserService>();
+            services.AddScoped<DeveloperService>();
+            services.AddScoped<CompanyService>();
+            services.AddScoped<LoginService>();
             services.AddControllers();
         }
 
