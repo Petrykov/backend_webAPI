@@ -1,6 +1,6 @@
-﻿using backend_dockerAPI.Services;
+﻿using System;
+using backend_dockerAPI.Services;
 using backend_web_api.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend_dockerAPI.Controllers
@@ -22,7 +22,8 @@ namespace backend_dockerAPI.Controllers
             if (token == null)
                 return Unauthorized();
 
-            return Ok(new { token, client.Email });
+            var clientType = service.GetClientType(client.Email);
+            return Ok(new { token, client.Email, clientType });
         }
     }
 }

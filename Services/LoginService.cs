@@ -23,6 +23,17 @@ namespace backend_dockerAPI.Services
             this.key = configuration.GetSection("JwtKey").ToString();
         }
 
+        public string GetClientType (string email) {
+            var developer = developers.Find(x => x.Email == email).FirstOrDefault();
+            var company = companies.Find(x => x.Email == email).FirstOrDefault();
+
+            if(developer != null){
+                return "developer";
+            }
+
+            return "company";
+        }
+
         public string Authenticate(string email, string password)
         {
             var developer = developers.Find(x => x.Email == email && x.Password == password).FirstOrDefault();
