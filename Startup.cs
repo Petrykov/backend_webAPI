@@ -60,6 +60,8 @@ namespace backend_dockerAPI
             services.AddScoped<LoginService>();
             services.AddScoped<QuizService>();
             services.AddScoped<QuestionService>();
+            services.AddScoped<SolvedQuizService>();
+
             services.AddControllers();
         }
 
