@@ -31,6 +31,13 @@ namespace backend_dockerAPI.Controllers
             return Json(developer);
         }
 
+        [HttpPut("{id:length(24)}")]
+        [Authorize]
+        public ActionResult <Developer> ChangeDeveloper(string id, Developer developer)
+        {
+            return service.ChangeDeveloper(id, developer);
+        }
+
         [HttpPost]
         public ActionResult<Developer> Create(Developer developer)
         {
