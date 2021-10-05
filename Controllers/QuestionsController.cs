@@ -8,6 +8,7 @@ namespace backend_dockerAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class QuestionsController : Controller
     {
         private readonly QuestionService service;
