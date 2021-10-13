@@ -3,6 +3,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using backend_dockerAPI.Models;
+using backend_web_api.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
@@ -32,6 +33,14 @@ namespace backend_dockerAPI.Services
             }
 
             return "company";
+        }
+
+        public Client getClient (string email) {
+            return  developers.Find(x => x.Email == email).FirstOrDefault();
+        }
+
+        public Company getCompany (string email) {
+            return  companies.Find(x => x.Email == email).FirstOrDefault();
         }
 
         public string Authenticate(string email, string password)
