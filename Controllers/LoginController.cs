@@ -25,6 +25,7 @@ namespace backend_dockerAPI.Controllers
             var clientData = service.getClient(client.Email);
             var companyData = service.getCompany(client.Email);
             var user = clientData != null ? clientData : companyData;
+
             var clientType = service.GetClientType(client.Email);
             return Ok(new { token, clientType, user });
         }
