@@ -14,5 +14,15 @@ namespace backend_dockerAPI.Models
         public int duration { get; set; }
         public string[] QuestionIds { get; set; }
         public int Complexity { get; set; }
+
+        public Quiz(string creatorId, string name, string requiredStack, int duration, string[] questionIds, int complexity)
+        {
+            CreatorId = creatorId;
+            Name = name;
+            RequiredStack = requiredStack;
+            this.duration = duration;
+            QuestionIds = questionIds;
+            Complexity = complexity;
+        }
     }
 }

@@ -12,5 +12,13 @@ namespace backend_web_api.Models
         public string Password { get; set; }
         public string Name { get; set; }
         public string Img { get; set; }
+
+        public Client(string email, string password, string name, string img)
+        {
+            Email = email;
+            Password = password;
+            Name = name;
+            Img = img;
+        }
     }
 }

@@ -10,5 +10,12 @@ namespace backend_dockerAPI.Models
         public string QuestionValue { get; set; }
         public string[] Answers { get; set; }
         public int CorrectAnswerNumber { get; set; }
+
+        public Question(string questionValue, string[] answers, int correctAnswerNumber)
+        {
+            QuestionValue = questionValue;
+            Answers = answers;
+            CorrectAnswerNumber = correctAnswerNumber;
+        } 
     }
 }

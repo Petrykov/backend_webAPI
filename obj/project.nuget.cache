@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "86NYq7R+InID3a/geR+Hho2JxjIJsxRiYC6R2Q6VRG7T6y6LOdvylTNW6rezzlQjqY7aP6ty+NhPgCz3dhuQxw==",
+  "dgSpecHash": "c2fhBkqOUDYzjg9s4XVQYwbtBPZ0JS49iR6ccHTLiEJYSGesb/DXMFALEuYL0n6ShwytXMe19FL3iRTUMSri1w==",
   "success": true,
   "projectFilePath": "/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/backend_dockerAPI.csproj",
   "expectedPackageFiles": [
     "/Users/mac/.nuget/packages/dnsclient/1.4.0/dnsclient.1.4.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/em.usingswagger/1.0.8/em.usingswagger.1.0.8.nupkg.sha512",
     "/Users/mac/.nuget/packages/jwt/8.4.0/jwt.8.4.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.aspnet.webapi.client/4.0.20710/microsoft.aspnet.webapi.client.4.0.20710.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.aspnet.webapi.core/4.0.20710/microsoft.aspnet.webapi.core.4.0.20710.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.aspnet.webapi.webhost/4.0.20710/microsoft.aspnet.webapi.webhost.4.0.20710.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/3.1.4/microsoft.aspnetcore.authentication.jwtbearer.3.1.4.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.2.0/microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnetcore.http.features/2.2.0/microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
@@ -18,13 +21,15 @@
     "/Users/mac/.nuget/packages/microsoft.extensions.dependencymodel/2.1.0/microsoft.extensions.dependencymodel.2.1.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.extensions.primitives/2.2.0/microsoft.extensions.primitives.2.2.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.12.2/microsoft.identitymodel.jsonwebtokens.6.12.2.nupkg.sha512",
-    "/Users/mac/.nuget/packages/microsoft.identitymodel.logging/6.12.2/microsoft.identitymodel.logging.6.12.2.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.identitymodel.logging/6.13.1/microsoft.identitymodel.logging.6.13.1.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.identitymodel.protocols/5.5.0/microsoft.identitymodel.protocols.5.5.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/5.5.0/microsoft.identitymodel.protocols.openidconnect.5.5.0.nupkg.sha512",
-    "/Users/mac/.nuget/packages/microsoft.identitymodel.tokens/6.12.2/microsoft.identitymodel.tokens.6.12.2.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.identitymodel.tokens/6.13.1/microsoft.identitymodel.tokens.6.13.1.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.net.http/2.0.20710/microsoft.net.http.2.0.20710.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.netcore.platforms/2.1.2/microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.web.infrastructure/1.0.0/microsoft.web.infrastructure.1.0.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.win32.primitives/4.3.0/microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/mongodb.bson/2.13.1/mongodb.bson.2.13.1.nupkg.sha512",
     "/Users/mac/.nuget/packages/mongodb.driver/2.13.1/mongodb.driver.2.13.1.nupkg.sha512",
@@ -50,12 +55,14 @@
     "/Users/mac/.nuget/packages/runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/scrutor/3.0.1/scrutor.3.0.1.nupkg.sha512",
     "/Users/mac/.nuget/packages/sharpcompress/0.23.0/sharpcompress.0.23.0.nupkg.sha512",
-    "/Users/mac/.nuget/packages/swashbuckle.aspnetcore/5.4.1/swashbuckle.aspnetcore.5.4.1.nupkg.sha512",
+    "/Users/mac/.nuget/packages/swashbuckle/5.6.0/swashbuckle.5.6.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "/Users/mac/.nuget/packages/swashbuckle.aspnetcore.annotations/5.4.1/swashbuckle.aspnetcore.annotations.5.4.1.nupkg.sha512",
     "/Users/mac/.nuget/packages/swashbuckle.aspnetcore.filters/6.0.0/swashbuckle.aspnetcore.filters.6.0.0.nupkg.sha512",
-    "/Users/mac/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
-    "/Users/mac/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.5.0/swashbuckle.aspnetcore.swaggergen.5.5.0.nupkg.sha512",
-    "/Users/mac/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.4.1/swashbuckle.aspnetcore.swaggerui.5.4.1.nupkg.sha512",
+    "/Users/mac/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/Users/mac/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/Users/mac/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "/Users/mac/.nuget/packages/swashbuckle.core/5.6.0/swashbuckle.core.5.6.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/system.appcontext/4.3.0/system.appcontext.4.3.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/Users/mac/.nuget/packages/system.collections/4.3.0/system.collections.4.3.0.nupkg.sha512",
@@ -122,7 +129,79 @@
     "/Users/mac/.nuget/packages/system.threading.timer/4.3.0/system.threading.timer.4.3.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
-    "/Users/mac/.nuget/packages/system.xml.xmldocument/4.3.0/system.xml.xmldocument.4.3.0.nupkg.sha512"
+    "/Users/mac/.nuget/packages/system.xml.xmldocument/4.3.0/system.xml.xmldocument.4.3.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/webactivatorex/2.0.0/webactivatorex.2.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebApi.Client 4.0.20710' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebApi.Client",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebApi.Core 4.0.20710' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebApi.Core",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebApi.WebHost 4.0.20710' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebApi.WebHost",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Net.Http 2.0.20710' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Net.Http",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Web.Infrastructure 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Web.Infrastructure",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Swashbuckle.Core 5.6.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Swashbuckle.Core",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'WebActivatorEx 2.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "WebActivatorEx",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }
