@@ -52,3 +52,9 @@
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.Swagger.dll
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/System.Net.Http.Formatting.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/System.Web.Http.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/System.Web.Http.WebHost.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/Microsoft.Web.Infrastructure.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/Swashbuckle.Core.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/WebActivatorEx.dll
