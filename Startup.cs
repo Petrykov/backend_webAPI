@@ -65,7 +65,7 @@ namespace backend_dockerAPI
             services.AddScoped<QuizService>();
             services.AddScoped<QuestionService>();
             services.AddScoped<SolvedQuizService>();
-
+            services.AddControllers().AddNewtonsoftJson();
             services.AddControllers();
         }
 
