@@ -1,0 +1,19 @@
+{
+  "FilePath": "/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/backend_dockerAPI.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-3.0",
+    "LanguageVersion": "5.0",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-3.0"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 900
+  },
+  "RootNamespace": "backend_dockerAPI",
+  "Documents": [],
+  "SerializationFormat": "0.2"
+}
