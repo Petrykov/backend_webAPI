@@ -58,3 +58,4 @@
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/net5.0/Microsoft.Web.Infrastructure.dll
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/net5.0/Swashbuckle.Core.dll
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/net5.0/WebActivatorEx.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/net5.0/backend_dockerAPI.csproj.CopyComplete

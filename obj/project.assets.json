@@ -1930,7 +1930,7 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
-      "WebActivatorEx/2.0.0": {
+      "WebActivatorEx/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Web.Infrastructure": "1.0.0"
@@ -6609,15 +6609,15 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
-    "WebActivatorEx/2.0.0": {
-      "sha512": "B3ZbOEaGCqa7BLjZZw6wqprOJJMvP39h7Lr5ADkJOCPKHppAaCre34kR63/gfgpM4htzTfgm/pEw7r7qqqMgIA==",
+    "WebActivatorEx/2.2.0": {
+      "sha512": "LpTC82DGzFeqHjRGLvynZKRjjELcsED5f784N4IWEPZhPlJsVYQKVpxNUjNdcMV6YHMqRhEiqolr69UVaT4ciw==",
       "type": "package",
-      "path": "webactivatorex/2.0.0",
+      "path": "webactivatorex/2.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net40/WebActivatorEx.dll",
-        "webactivatorex.2.0.0.nupkg.sha512",
+        "webactivatorex.2.2.0.nupkg.sha512",
         "webactivatorex.nuspec"
       ]
     }
@@ -6630,7 +6630,8 @@
       "MongoDB.Driver >= 2.13.2",
       "Swashbuckle >= 5.6.0",
       "Swashbuckle.AspNetCore >= 6.2.3",
-      "System.IdentityModel.Tokens.Jwt >= 6.13.1"
+      "System.IdentityModel.Tokens.Jwt >= 6.13.1",
+      "WebActivatorEx >= 2.2.0"
     ]
   },
   "packageFolders": {
@@ -6701,6 +6702,10 @@
           "System.IdentityModel.Tokens.Jwt": {
             "target": "Package",
             "version": "[6.13.1, )"
+          },
+          "WebActivatorEx": {
+            "target": "Package",
+            "version": "[2.2.0, )"
           }
         },
         "imports": [
@@ -6790,7 +6795,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'WebActivatorEx 2.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'WebActivatorEx 2.2.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
       "libraryId": "WebActivatorEx",
       "targetGraphs": [
         "net5.0"

@@ -34,12 +34,12 @@
       "backend_dockerAPI/1.0.0": {
         "dependencies": {
           "EM.UsingSwagger": "1.0.8",
-          "JWT": "8.4.0",
+          "JWT": "8.4.2",
           "Microsoft.IdentityModel.Tokens": "6.13.1",
-          "MongoDB.Driver": "2.13.1",
+          "MongoDB.Driver": "2.13.2",
           "Swashbuckle": "5.6.0",
           "Swashbuckle.AspNetCore": "6.2.3",
-          "System.IdentityModel.Tokens.Jwt": "6.12.2",
+          "System.IdentityModel.Tokens.Jwt": "6.13.1",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -362,12 +362,9 @@
           "lib/netcoreapp3.1/EM.UsingSwagger.dll": {}
         }
       },
-      "JWT/8.4.0": {
+      "JWT/8.4.2": {
         "dependencies": {
-          "Newtonsoft.Json": "10.0.3",
-          "System.ComponentModel.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.7.0",
-          "System.Security.Cryptography.Csp": "4.3.0"
+          "Newtonsoft.Json": "10.0.3"
         },
         "runtime": {
           "lib/net5.0/JWT.dll": {
@@ -455,7 +452,7 @@
           "System.Collections": "4.3.0",
           "System.IO": "4.3.0",
           "System.IO.FileSystem": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.7.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
           "System.Runtime.InteropServices": "4.3.0",
           "System.Runtime.InteropServices.RuntimeInformation": "4.3.0"
@@ -501,14 +498,14 @@
           "System.Runtime.CompilerServices.Unsafe": "5.0.0"
         }
       },
-      "Microsoft.IdentityModel.JsonWebTokens/6.12.2": {
+      "Microsoft.IdentityModel.JsonWebTokens/6.13.1": {
         "dependencies": {
           "Microsoft.IdentityModel.Tokens": "6.13.1"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
-            "assemblyVersion": "6.12.2.0",
-            "fileVersion": "6.12.2.20820"
+            "assemblyVersion": "6.13.1.0",
+            "fileVersion": "6.13.1.21006"
           }
         },
         "compile": {
@@ -545,7 +542,7 @@
         "dependencies": {
           "Microsoft.IdentityModel.Protocols": "5.5.0",
           "Newtonsoft.Json": "10.0.3",
-          "System.IdentityModel.Tokens.Jwt": "6.12.2"
+          "System.IdentityModel.Tokens.Jwt": "6.13.1"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {
@@ -605,48 +602,48 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "MongoDB.Bson/2.13.1": {
+      "MongoDB.Bson/2.13.2": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "5.0.0"
         },
         "runtime": {
           "lib/netstandard2.1/MongoDB.Bson.dll": {
-            "assemblyVersion": "2.13.1.0",
-            "fileVersion": "2.13.1.0"
+            "assemblyVersion": "2.13.2.0",
+            "fileVersion": "2.13.2.0"
           }
         },
         "compile": {
           "lib/netstandard2.1/MongoDB.Bson.dll": {}
         }
       },
-      "MongoDB.Driver/2.13.1": {
+      "MongoDB.Driver/2.13.2": {
         "dependencies": {
-          "MongoDB.Bson": "2.13.1",
-          "MongoDB.Driver.Core": "2.13.1",
+          "MongoDB.Bson": "2.13.2",
+          "MongoDB.Driver.Core": "2.13.2",
           "MongoDB.Libmongocrypt": "1.2.2"
         },
         "runtime": {
           "lib/netstandard2.1/MongoDB.Driver.dll": {
-            "assemblyVersion": "2.13.1.0",
-            "fileVersion": "2.13.1.0"
+            "assemblyVersion": "2.13.2.0",
+            "fileVersion": "2.13.2.0"
           }
         },
         "compile": {
           "lib/netstandard2.1/MongoDB.Driver.dll": {}
         }
       },
-      "MongoDB.Driver.Core/2.13.1": {
+      "MongoDB.Driver.Core/2.13.2": {
         "dependencies": {
           "DnsClient": "1.4.0",
-          "MongoDB.Bson": "2.13.1",
+          "MongoDB.Bson": "2.13.2",
           "MongoDB.Libmongocrypt": "1.2.2",
           "SharpCompress": "0.23.0",
           "System.Buffers": "4.5.1"
         },
         "runtime": {
           "lib/netstandard2.1/MongoDB.Driver.Core.dll": {
-            "assemblyVersion": "2.13.1.0",
-            "fileVersion": "2.13.1.0"
+            "assemblyVersion": "2.13.2.0",
+            "fileVersion": "2.13.2.0"
           }
         },
         "runtimeTargets": {
@@ -658,12 +655,12 @@
           "runtimes/win/native/snappy32.dll": {
             "rid": "win",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "1.1.1.7"
           },
           "runtimes/win/native/snappy64.dll": {
             "rid": "win",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "1.1.1.7"
           }
         },
         "compile": {
@@ -1015,7 +1012,7 @@
           "System.Reflection": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.7.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -1073,7 +1070,7 @@
           "System.Reflection.Emit": "4.3.0",
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.7.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -1105,15 +1102,15 @@
           "System.Runtime.InteropServices": "4.3.0"
         }
       },
-      "System.IdentityModel.Tokens.Jwt/6.12.2": {
+      "System.IdentityModel.Tokens.Jwt/6.13.1": {
         "dependencies": {
-          "Microsoft.IdentityModel.JsonWebTokens": "6.12.2",
+          "Microsoft.IdentityModel.JsonWebTokens": "6.13.1",
           "Microsoft.IdentityModel.Tokens": "6.13.1"
         },
         "runtime": {
           "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": {
-            "assemblyVersion": "6.12.2.0",
-            "fileVersion": "6.12.2.20820"
+            "assemblyVersion": "6.13.1.0",
+            "fileVersion": "6.13.1.21006"
           }
         },
         "compile": {
@@ -1201,7 +1198,7 @@
           "System.Reflection.Emit.Lightweight": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.7.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -1314,7 +1311,12 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Reflection.TypeExtensions/4.7.0": {},
+      "System.Reflection.TypeExtensions/4.3.0": {
+        "dependencies": {
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
       "System.Resources.ResourceManager/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
@@ -3335,12 +3337,12 @@
       "path": "em.usingswagger/1.0.8",
       "hashPath": "em.usingswagger.1.0.8.nupkg.sha512"
     },
-    "JWT/8.4.0": {
+    "JWT/8.4.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cEC67wigEbXZUsamMGXly3V3bZCDCOB5QUvw0xKY8uim1M4n9oYk5A7Sr/cfddJtd2rdmPbq+wYjURXfL3JpvA==",
-      "path": "jwt/8.4.0",
-      "hashPath": "jwt.8.4.0.nupkg.sha512"
+      "sha512": "sha512-YWKZBc13tyULOAwDLBZVuTJP+BXuX3owej/kUxS7ZlJOti8M4Lz/3cMT3u588nFZuL8kHWyZy80795cyORpF6w==",
+      "path": "jwt/8.4.2",
+      "hashPath": "jwt.8.4.2.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/4.0.20710": {
       "type": "package",
@@ -3433,12 +3435,12 @@
       "path": "microsoft.extensions.primitives/2.2.0",
       "hashPath": "microsoft.extensions.primitives.2.2.0.nupkg.sha512"
     },
-    "Microsoft.IdentityModel.JsonWebTokens/6.12.2": {
+    "Microsoft.IdentityModel.JsonWebTokens/6.13.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-krI9z6wjjIMCoQRmRicPt5oy9qrpCyXJhopkv4L+8uoN8l+NTmyv+gUCxkZKjiBqChgCL4cMvYCAkVdbjgpj+g==",
-      "path": "microsoft.identitymodel.jsonwebtokens/6.12.2",
-      "hashPath": "microsoft.identitymodel.jsonwebtokens.6.12.2.nupkg.sha512"
+      "sha512": "sha512-seLGCIo8bDz93PGgKY9vV4PAHpu1iXwH4Xm6O+HOJbIcnpiJz4f4C/MVFKfOb+yKGMtix2qyFkQMKOdVmArn0Q==",
+      "path": "microsoft.identitymodel.jsonwebtokens/6.13.1",
+      "hashPath": "microsoft.identitymodel.jsonwebtokens.6.13.1.nupkg.sha512"
     },
     "Microsoft.IdentityModel.Logging/6.13.1": {
       "type": "package",
@@ -3510,26 +3512,26 @@
       "path": "microsoft.win32.primitives/4.3.0",
       "hashPath": "microsoft.win32.primitives.4.3.0.nupkg.sha512"
     },
-    "MongoDB.Bson/2.13.1": {
+    "MongoDB.Bson/2.13.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-B/AI2we7YwfFuNcXr4jlCnVI5dJp+g8vkyj3Shi/bOpGhZQaxW4jK/NiiTwYvqxaMOe4MtVR+6Zlk4D2zalC7A==",
-      "path": "mongodb.bson/2.13.1",
-      "hashPath": "mongodb.bson.2.13.1.nupkg.sha512"
+      "sha512": "sha512-qY9271GFCYLA8OB3MdQC8clJh9wnh65gcxUa5Skwh2xYryv21YAHx/VOvv4ILpkb1NhIVgy3LBQhVBldwLaqNg==",
+      "path": "mongodb.bson/2.13.2",
+      "hashPath": "mongodb.bson.2.13.2.nupkg.sha512"
     },
-    "MongoDB.Driver/2.13.1": {
+    "MongoDB.Driver/2.13.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BGpE1Ce33T3MrStgxC4CPLVDA2ngsI+WZk4SYn+ycOaU5uQ7zwbQzqpdzHrS7EcMNVpD9r2wnpjos0nxhxvshw==",
-      "path": "mongodb.driver/2.13.1",
-      "hashPath": "mongodb.driver.2.13.1.nupkg.sha512"
+      "sha512": "sha512-4+fczDJxxx7HPWY1n75hzHCOZiAhpb1Tjpkvj+c3lAeBGmSCvh5THcadxZ7b97F6OdHxz4xy07mIiwfZlPuQVQ==",
+      "path": "mongodb.driver/2.13.2",
+      "hashPath": "mongodb.driver.2.13.2.nupkg.sha512"
     },
-    "MongoDB.Driver.Core/2.13.1": {
+    "MongoDB.Driver.Core/2.13.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lLYYMBneLHA9PYwWzbfC3p0NkAqzxbT8ZuinCH9MwR2bgHqu/6cOaJG12twKsnjc6KJVBboY0ufjHt43T9ZLnA==",
-      "path": "mongodb.driver.core/2.13.1",
-      "hashPath": "mongodb.driver.core.2.13.1.nupkg.sha512"
+      "sha512": "sha512-VY1ayl9yXcZZ0VoXftZD3quHBgdn2EEMmuKlz4V6z2+8grN2svdASwX9E4p0DmOAAX8Wd5B5lYsUifrbo4M5xA==",
+      "path": "mongodb.driver.core/2.13.2",
+      "hashPath": "mongodb.driver.core.2.13.2.nupkg.sha512"
     },
     "MongoDB.Libmongocrypt/1.2.2": {
       "type": "package",
@@ -3860,12 +3862,12 @@
       "path": "system.globalization.extensions/4.3.0",
       "hashPath": "system.globalization.extensions.4.3.0.nupkg.sha512"
     },
-    "System.IdentityModel.Tokens.Jwt/6.12.2": {
+    "System.IdentityModel.Tokens.Jwt/6.13.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-EuH4UucURwusIGhZNJFI3dS8d6voaaF00v9ezllvn5AlJk+5O5LC7rH967ktWbFeTTYlQx3ltlcRp1hW4VXKWQ==",
-      "path": "system.identitymodel.tokens.jwt/6.12.2",
-      "hashPath": "system.identitymodel.tokens.jwt.6.12.2.nupkg.sha512"
+      "sha512": "sha512-BTVPnmvqpKxv+ucl3Ii7HnRVvXvfm/P5iq3rnTnJ0YuneZUS7zGtE+DRrVQWSd431ntjZuHBGPbjaB+nCSq9Uw==",
+      "path": "system.identitymodel.tokens.jwt/6.13.1",
+      "hashPath": "system.identitymodel.tokens.jwt.6.13.1.nupkg.sha512"
     },
     "System.IO/4.3.0": {
       "type": "package",
@@ -3993,12 +3995,12 @@
       "path": "system.reflection.primitives/4.3.0",
       "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
     },
-    "System.Reflection.TypeExtensions/4.7.0": {
+    "System.Reflection.TypeExtensions/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VybpaOQQhqE6siHppMktjfGBw1GCwvCqiufqmP8F1nj7fTUNtW35LOEt3UZTEsECfo+ELAl/9o9nJx3U91i7vA==",
-      "path": "system.reflection.typeextensions/4.7.0",
-      "hashPath": "system.reflection.typeextensions.4.7.0.nupkg.sha512"
+      "sha512": "sha512-7u6ulLcZbyxB5Gq0nMkQttcdBTx57ibzw+4IOXEfR+sXYQoHvjW5LTLyNr8O22UIMrqYbchJQJnos4eooYzYJA==",
+      "path": "system.reflection.typeextensions/4.3.0",
+      "hashPath": "system.reflection.typeextensions.4.3.0.nupkg.sha512"
     },
     "System.Resources.ResourceManager/4.3.0": {
       "type": "package",
