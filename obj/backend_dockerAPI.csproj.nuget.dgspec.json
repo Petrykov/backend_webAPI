@@ -47,7 +47,7 @@
             },
             "JWT": {
               "target": "Package",
-              "version": "[8.4.0, )"
+              "version": "[8.4.2, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
@@ -55,7 +55,7 @@
             },
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[2.13.1, )"
+              "version": "[2.13.2, )"
             },
             "Swashbuckle": {
               "target": "Package",
@@ -67,7 +67,7 @@
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.12.2, )"
+              "version": "[6.13.1, )"
             }
           },
           "imports": [
