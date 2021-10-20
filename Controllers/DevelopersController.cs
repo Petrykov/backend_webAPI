@@ -8,6 +8,7 @@ namespace backend_dockerAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class DevelopersController : Controller
     {
         private readonly DeveloperService service;
@@ -18,7 +19,6 @@ namespace backend_dockerAPI.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public ActionResult<List<Developer>> GetDevelopers()
         {
             return service.GetDevelopers();
@@ -32,7 +32,6 @@ namespace backend_dockerAPI.Controllers
         }
 
         [HttpPut("{id:length(24)}")]
-        [Authorize]
         public ActionResult <Developer> ChangeDeveloper(string id, Developer developer)
         {
             return service.ChangeDeveloper(id, developer);

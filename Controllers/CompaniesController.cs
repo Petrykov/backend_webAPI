@@ -8,6 +8,7 @@ namespace backend_dockerAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CompaniesController : Controller
     {
         private readonly CompanyService service;
@@ -18,7 +19,6 @@ namespace backend_dockerAPI.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public ActionResult<List<Company>> GetCompanies()
         {
             return service.GetCompanies();
