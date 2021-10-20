@@ -28,9 +28,7 @@ namespace backend_dockerAPI.Services
             //var update = Builders<BsonDocument>.Update.Set("SolvedQuizzesIds", new string[] { solvedQuiz.SolvedQuizId });
 
             developers.UpdateOne(filter, update);
-
-            //developers.UpdateOneAsync(new BsonDocument("_id", solvedQuiz.SolvedBy), new BsonDocument("$set", new BsonDocument("SolvedQuizzesIds", solvedQuiz.SolvedQuizId)));
-
+            solvedQuizzes.InsertOne(solvedQuiz);
             return solvedQuiz;
         }
     }
