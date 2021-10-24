@@ -1,9 +1,3 @@
-/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.GeneratedMSBuildEditorConfig.editorconfig
-/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.AssemblyInfoInputs.cache
-/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.AssemblyInfo.cs
-/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.csproj.CoreCompileInputs.cache
-/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.MvcApplicationPartsAssemblyInfo.cs
-/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.MvcApplicationPartsAssemblyInfo.cache
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/appsettings.Development.json
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/appsettings.json
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/backend_dockerAPI.deps.json
@@ -80,11 +74,16 @@
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.AssemblyInfoInputs.cache
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.AssemblyInfo.cs
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.csproj.CoreCompileInputs.cache
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.MvcApplicationPartsAssemblyInfo.cs
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.MvcApplicationPartsAssemblyInfo.cache
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/staticwebassets/backend_dockerAPI.StaticWebAssets.Manifest.cache
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/staticwebassets/backend_dockerAPI.StaticWebAssets.xml
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/scopedcss/bundle/backend_dockerAPI.styles.css
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.RazorTargetAssemblyInfo.cache
-/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.csproj.CopyComplete
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.dll
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.pdb
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.genruntimeconfig.cache
