@@ -41,6 +41,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AspNetCore.Mvc.HttpActionResults": {
+              "target": "Package",
+              "version": "[0.3.0, )"
+            },
             "EM.UsingSwagger": {
               "target": "Package",
               "version": "[1.0.8, )"
@@ -72,6 +76,10 @@
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.13.1, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
             }
           },
           "imports": [

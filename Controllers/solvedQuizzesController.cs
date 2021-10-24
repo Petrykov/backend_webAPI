@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using backend_dockerAPI.Models;
 using backend_dockerAPI.Services;
@@ -21,13 +22,27 @@ namespace backend_dockerAPI.Controllers
         [HttpGet]
         public ActionResult<List<SolvedQuiz>> GetSolvedQuizzes()
         {
-            return service.GetSolvedQuizzes();
+            try
+            {
+                return service.GetSolvedQuizzes();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         [HttpPost]
         public ActionResult<SolvedQuiz> Create(SolvedQuiz solvedQuiz)
         {
-            service.Create(solvedQuiz);
+            try
+            {
+                service.Create(solvedQuiz);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
             return Json(solvedQuiz);
         }
     }

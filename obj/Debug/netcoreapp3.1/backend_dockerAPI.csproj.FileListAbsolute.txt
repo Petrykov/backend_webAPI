@@ -61,3 +61,15 @@
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.pdb
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.genruntimeconfig.cache
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.csproj.AssemblyReference.cache
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/AspNetCore.Mvc.HttpActionResults.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/AspNetCore.Mvc.HttpActionResults.ClientError.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/AspNetCore.Mvc.HttpActionResults.ClientError.Extensions.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/AspNetCore.Mvc.HttpActionResults.Informational.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/AspNetCore.Mvc.HttpActionResults.Informational.Extensions.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/AspNetCore.Mvc.HttpActionResults.Redirection.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/AspNetCore.Mvc.HttpActionResults.Redirection.Extensions.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/AspNetCore.Mvc.HttpActionResults.ServerError.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/AspNetCore.Mvc.HttpActionResults.ServerError.Extensions.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/AspNetCore.Mvc.HttpActionResults.Success.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/AspNetCore.Mvc.HttpActionResults.Success.Extensions.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/Microsoft.Extensions.PlatformAbstractions.dll

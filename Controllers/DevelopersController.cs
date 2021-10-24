@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using backend_dockerAPI.Models;
 using backend_dockerAPI.Services;
@@ -21,26 +22,53 @@ namespace backend_dockerAPI.Controllers
         [HttpGet]
         public ActionResult<List<Developer>> GetDevelopers()
         {
-            return service.GetDevelopers();
+            try
+            {
+                return service.GetDevelopers();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         [HttpGet("{id:length(24)}")]
         public ActionResult<Developer> GetDeveloper(string id)
         {
             var developer = service.GetDeveloper(id);
+            if (developer == null)
+            {
+                return BadRequest("Developer with id [" + id + "] does not exists.");
+            }
             return Json(developer);
         }
 
         [HttpPut("{id:length(24)}")]
-        public ActionResult <Developer> ChangeDeveloper(string id, Developer developer)
+        public ActionResult<Developer> ChangeDeveloper(string id, Developer developer)
         {
-            return service.ChangeDeveloper(id, developer);
+            try
+            {
+                return service.ChangeDeveloper(id, developer);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
 
         [HttpPost]
         public ActionResult<Developer> Create(Developer developer)
         {
-            service.Create(developer);
+            try
+            {
+                service.Create(developer);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
             return Json(developer);
         }
     }

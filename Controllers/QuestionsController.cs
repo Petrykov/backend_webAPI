@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using backend_dockerAPI.Models;
 using backend_dockerAPI.Services;
@@ -21,21 +22,39 @@ namespace backend_dockerAPI.Controllers
         [HttpGet]
         public ActionResult<List<Question>> GetQuestions()
         {
-            return service.GetQuestions();
+            try
+            {
+                return service.GetQuestions();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         [HttpGet("{id:length(24)}")]
         public ActionResult<Question> GetQuestion(string id)
         {
-            var questions = service.GetQuestion(id);
-            return Json(questions);
+            var question = service.GetQuestion(id);
+            if (question == null)
+            {
+                return BadRequest("Question with id [" + id + "] does not exists.");
+            }
+            return Json(question);
         }
 
         [HttpPost]
         public ActionResult<Question> Create(Question question)
         {
-            service.Create(question);
+            try
+            {
+                service.Create(question);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
             return Json(question);
-        } 
+        }
     }
 }

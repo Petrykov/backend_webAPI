@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using backend_dockerAPI.Models;
 using backend_dockerAPI.Services;
@@ -21,20 +22,39 @@ namespace backend_dockerAPI.Controllers
         [HttpGet]
         public ActionResult<List<Quiz>> GetQuizzes()
         {
-            return service.GetQuizzes();
+            try
+            {
+                return service.GetQuizzes();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         [HttpGet("{id:length(24)}")]
         public ActionResult<Quiz> GetQuiz(string id)
         {
             var quiz = service.GetQuiz(id);
+            if (quiz == null)
+            {
+                return BadRequest("Quiz with id [" + id + "] does not exists.");
+            }
             return Json(quiz);
         }
 
         [HttpPost]
         public ActionResult<Quiz> Create(Quiz quiz)
         {
-            service.Create(quiz);
+            try
+            {
+                service.Create(quiz);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
             return Json(quiz);
         }
 

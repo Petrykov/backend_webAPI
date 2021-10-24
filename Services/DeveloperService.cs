@@ -24,6 +24,7 @@ namespace backend_dockerAPI.Services
             var existingDeveloper = developers.Find<Developer>(developer => developer.Id == id).FirstOrDefault();
 
             if(developer.Password != null) {existingDeveloper.Password = developer.Password;}
+            if(developer.Name!= null) { existingDeveloper.Name = developer.Name; }
             if(developer.Img != null) {existingDeveloper.Img = developer.Img;}
             if(developer.PhoneNumber != null) {existingDeveloper.PhoneNumber = developer.PhoneNumber;}
             if(developer.City != null) {existingDeveloper.City = developer.City;}

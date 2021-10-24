@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Net;
 using backend_dockerAPI.Models;
 using backend_dockerAPI.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -21,20 +23,39 @@ namespace backend_dockerAPI.Controllers
         [HttpGet]
         public ActionResult<List<Company>> GetCompanies()
         {
-            return service.GetCompanies();
+            try
+            {
+                return service.GetCompanies();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         [HttpGet("{id:length(24)}")]
         public ActionResult<Company> GetCompany(string id)
         {
             var company = service.GetCompany(id);
-            return Json(company);
+            if (company == null)
+            {
+                return BadRequest("Company with id [" + id + "] does not exists.");
+            }
+            return company;
         }
 
         [HttpPost]
         public ActionResult<Company> Create(Company company)
         {
-            service.Create(company);
+            try
+            {
+                service.Create(company);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
             return Json(company);
         }
     }
