@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using System.ComponentModel.DataAnnotations;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace backend_dockerAPI.Models
@@ -6,12 +7,17 @@ namespace backend_dockerAPI.Models
     public class Quiz
     {
         [BsonId]
+        [Required]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
+        [Required]
         public string CreatorId { get; set; }
+        [Required]
         public string Name { get; set; }
         public string RequiredStack { get; set; }
+        [Required]
         public int duration { get; set; }
+        [Required]
         public string[] QuestionIds { get; set; }
         public int Complexity { get; set; }
 

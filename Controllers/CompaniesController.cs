@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Net;
 using backend_dockerAPI.Models;
 using backend_dockerAPI.Services;
 using Microsoft.AspNetCore.Authorization;
