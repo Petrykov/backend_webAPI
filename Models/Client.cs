@@ -7,7 +7,6 @@ namespace backend_web_api.Models
     public class Client
     {
         [BsonId]
-        [Required]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
         [Required]

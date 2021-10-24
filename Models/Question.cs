@@ -6,7 +6,6 @@ namespace backend_dockerAPI.Models
     public class Question
     {
         [BsonId]
-        [Required]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
         [Required]
@@ -21,6 +20,6 @@ namespace backend_dockerAPI.Models
             QuestionValue = questionValue;
             Answers = answers;
             CorrectAnswerNumber = correctAnswerNumber;
-        } 
+        }
     }
 }

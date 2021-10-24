@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using backend_dockerAPI.Models;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Bson;
@@ -9,12 +10,12 @@ namespace backend_dockerAPI.Services
 {
     public class SolvedQuizService
     {
-        private readonly IMongoCollection <SolvedQuiz> solvedQuizzes;
-        private readonly IMongoCollection <BsonDocument> developers;
+        private readonly IMongoCollection<SolvedQuiz> solvedQuizzes;
+        private readonly IMongoCollection<BsonDocument> developers;
 
         public SolvedQuizService(IMongoClient client, IConfiguration configuration, LoginService _service)
         {
-            var database = client.GetDatabase("AdvancedAppDevelopment");
+            var database = client.GetDatabase(configuration.GetValue<string>("databaseName"));
             solvedQuizzes = database.GetCollection<SolvedQuiz>("SolvedQuizzes");
             developers = database.GetCollection<BsonDocument>("Developers");
         }

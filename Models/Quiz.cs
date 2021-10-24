@@ -7,7 +7,6 @@ namespace backend_dockerAPI.Models
     public class Quiz
     {
         [BsonId]
-        [Required]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
         [Required]

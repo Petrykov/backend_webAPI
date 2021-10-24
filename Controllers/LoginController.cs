@@ -1,10 +1,11 @@
-﻿using backend_dockerAPI.Services;
+﻿using System;
+using backend_dockerAPI.Services;
 using backend_web_api.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend_dockerAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [ApiRoutes.Login]
     [ApiController]
     public class LoginController : Controller
     {

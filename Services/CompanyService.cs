@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using backend_dockerAPI.Models;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
@@ -8,11 +9,11 @@ namespace backend_dockerAPI.Services
 {
     public class CompanyService
     {
-        private readonly IMongoCollection <Company> companies;
+        private readonly IMongoCollection<Company> companies;
 
         public CompanyService(IMongoClient client, IConfiguration configuration)
         {
-            var database = client.GetDatabase("AdvancedAppDevelopment");
+            var database = client.GetDatabase(configuration.GetValue<string>("databaseName"));
             companies = database.GetCollection<Company>("Companies");
         }
 

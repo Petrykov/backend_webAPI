@@ -1,24 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using backend_dockerAPI.Models;
+﻿using System.Text;
 using backend_dockerAPI.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using Swashbuckle.AspNetCore.Swagger;
 using MongoDB.Driver;
 
+// `databaseName` field in appsettings.json
+//  TestingDatabase (to run Integration tests), AcvancedAppDevelopment (to run tests on production database),
 namespace backend_dockerAPI
 {
     public class Startup
@@ -28,7 +20,7 @@ namespace backend_dockerAPI
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration Configuration { get; private set;}
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -38,6 +30,8 @@ namespace backend_dockerAPI
                 var uri = s.GetRequiredService<IConfiguration>()["MongoUri"];
                 return new MongoClient(uri);
             });
+
+            services.AddOptions<string>("optionsAccessor.CurrentValue");
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen();
@@ -59,6 +53,8 @@ namespace backend_dockerAPI
                 };
             });
 
+            //services.Configure<TestingDatabaseConfiguration>(Configuration.GetSection("testingDatabase"));
+
             services.AddScoped<DeveloperService>();
             services.AddScoped<CompanyService>();
             services.AddScoped<LoginService>();
@@ -70,8 +66,9 @@ namespace backend_dockerAPI
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IConfiguration configuration)
         {
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

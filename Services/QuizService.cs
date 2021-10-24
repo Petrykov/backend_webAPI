@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Configuration;
 using backend_dockerAPI.Models;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
@@ -7,12 +8,12 @@ namespace backend_dockerAPI.Services
 {
     public class QuizService
     {
-        
-        private readonly IMongoCollection <Quiz> quizzes;
+
+        private readonly IMongoCollection<Quiz> quizzes;
 
         public QuizService(IMongoClient client, IConfiguration configuration)
         {
-            var database = client.GetDatabase("AdvancedAppDevelopment");
+            var database = client.GetDatabase(configuration.GetValue<string>("databaseName"));
             quizzes = database.GetCollection<Quiz>("Quizzes");
         }
 
