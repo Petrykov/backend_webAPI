@@ -88,3 +88,4 @@
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.dll
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.pdb
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.genruntimeconfig.cache
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.csproj.AssemblyReference.cache

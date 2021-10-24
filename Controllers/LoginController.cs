@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace backend_dockerAPI.Controllers
 {
-    [ApiRoutes.Login]
+    [Route("api/[controller]")]
     [ApiController]
     public class LoginController : Controller
     {
