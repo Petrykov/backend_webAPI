@@ -13,7 +13,7 @@ namespace backend_dockerAPI.Services
 
         public QuestionService(IMongoClient client, IConfiguration configuration)
         {
-            var database = client.GetDatabase("AdvancedAppDevelopment");
+            var database = client.GetDatabase(configuration.GetValue<string>("databaseName"));
             questions = database.GetCollection<Question>("Questions");
         }
 
