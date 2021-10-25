@@ -9,7 +9,6 @@ namespace backend_dockerAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class CompaniesController : Controller
     {
         private readonly CompanyService service;
@@ -20,6 +19,7 @@ namespace backend_dockerAPI.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult<List<Company>> GetCompanies()
         {
             try
@@ -33,6 +33,7 @@ namespace backend_dockerAPI.Controllers
         }
 
         [HttpGet("{id:length(24)}")]
+        [Authorize]
         public ActionResult<Company> GetCompany(string id)
         {
             var company = service.GetCompany(id);
