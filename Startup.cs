@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
+using Microsoft.AspNetCore.Http;
 
 // `databaseName` field in appsettings.json
 //  TestingDatabase (to run Integration tests), AcvancedAppDevelopment (to run tests on production database),
@@ -63,6 +64,7 @@ namespace backend_dockerAPI
             services.AddScoped<SolvedQuizService>();
             services.AddControllers().AddNewtonsoftJson();
             services.AddControllers();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,6 +76,9 @@ namespace backend_dockerAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
+
+
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
@@ -81,9 +86,11 @@ namespace backend_dockerAPI
                 c.RoutePrefix = string.Empty;
             });
 
+
             app.UseRouting();
 
             app.UseHttpsRedirection();
+
 
             app.UseRouting();
 
