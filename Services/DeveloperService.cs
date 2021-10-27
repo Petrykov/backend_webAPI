@@ -34,6 +34,7 @@ namespace backend_dockerAPI.Services
             if (developer.PhoneNumber != null) { existingDeveloper.PhoneNumber = developer.PhoneNumber; }
             if (developer.City != null) { existingDeveloper.City = developer.City; }
             if (developer.Description != null) { existingDeveloper.Description = developer.Description; }
+            if (developer.OccupationField != null) { existingDeveloper.OccupationField = developer.OccupationField; }
 
             developers.ReplaceOne(developer => developer.Id == id, existingDeveloper);
 
