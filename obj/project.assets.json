@@ -7977,19 +7977,23 @@
     ]
   },
   "packageFolders": {
-    "/home/vadim/.nuget/packages/": {}
+    "/Users/mac/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/vadim/Downloads/Alex/Backend/backend_webAPI/backend_dockerAPI.csproj",
+      "projectUniqueName": "/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/backend_dockerAPI.csproj",
       "projectName": "backend_dockerAPI",
-      "projectPath": "/home/vadim/Downloads/Alex/Backend/backend_webAPI/backend_dockerAPI.csproj",
-      "packagesPath": "/home/vadim/.nuget/packages/",
-      "outputPath": "/home/vadim/Downloads/Alex/Backend/backend_webAPI/obj/",
+      "projectPath": "/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/backend_dockerAPI.csproj",
+      "packagesPath": "/Users/mac/.nuget/packages/",
+      "outputPath": "/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/home/vadim/.nuget/NuGet/NuGet.Config"
+        "/Users/mac/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -7999,6 +8003,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -8010,6 +8015,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "AspNetCore.Mvc.HttpActionResults": {
             "target": "Package",
@@ -8074,7 +8080,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/143/sdk/3.1.414/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
       }
     }
   },
