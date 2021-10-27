@@ -179,3 +179,13 @@
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.dll
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.pdb
 /Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/obj/Debug/netcoreapp3.1/backend_dockerAPI.genruntimeconfig.cache
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/AWSSDK.Core.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/AWSSDK.S3.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/System.Web.Mvc.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/System.Web.Razor.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/System.Web.Helpers.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/System.Web.WebPages.Deployment.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/System.Web.WebPages.Razor.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/System.Web.WebPages.dll
+/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/bin/Debug/netcoreapp3.1/System.Web.Mvc.Expressions.dll

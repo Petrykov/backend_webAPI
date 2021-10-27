@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "peN+b4z7R/6OJXp/Ab4bNcCRulXvSXbiYn85cJGbdgzpxi6nztV5DbxbJ3WGMfzLQGlVzcbhyCSotIlnh4fu7w==",
+  "dgSpecHash": "d+NuF2TDvJ76DlKHC6vCJed422GRYg71SpNNhY4U+o0gY8ND6QaTISo3xPUiXtUQPOzX//4ZUAchCy2ljxDSeg==",
   "success": true,
   "projectFilePath": "/Users/mac/Projects/backend_dockerAPI/backend_dockerAPI/backend_dockerAPI.csproj",
   "expectedPackageFiles": [
@@ -15,12 +15,18 @@
     "/Users/mac/.nuget/packages/aspnetcore.mvc.httpactionresults.servererror.extensions/0.3.0/aspnetcore.mvc.httpactionresults.servererror.extensions.0.3.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/aspnetcore.mvc.httpactionresults.success/0.3.0/aspnetcore.mvc.httpactionresults.success.0.3.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/aspnetcore.mvc.httpactionresults.success.extensions/0.3.0/aspnetcore.mvc.httpactionresults.success.extensions.0.3.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/awssdk.core/3.7.3.26/awssdk.core.3.7.3.26.nupkg.sha512",
+    "/Users/mac/.nuget/packages/awssdk.extensions.netcore.setup/3.3.101/awssdk.extensions.netcore.setup.3.3.101.nupkg.sha512",
+    "/Users/mac/.nuget/packages/awssdk.s3/3.7.3.19/awssdk.s3.3.7.3.19.nupkg.sha512",
     "/Users/mac/.nuget/packages/dnsclient/1.4.0/dnsclient.1.4.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/em.usingswagger/1.0.8/em.usingswagger.1.0.8.nupkg.sha512",
     "/Users/mac/.nuget/packages/jwt/8.4.2/jwt.8.4.2.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.aspnet.mvc/5.2.3/microsoft.aspnet.mvc.5.2.3.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.aspnet.razor/3.2.3/microsoft.aspnet.razor.3.2.3.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnet.webapi.client/4.0.20710/microsoft.aspnet.webapi.client.4.0.20710.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnet.webapi.core/4.0.20710/microsoft.aspnet.webapi.core.4.0.20710.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnet.webapi.webhost/4.0.20710/microsoft.aspnet.webapi.webhost.4.0.20710.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.aspnet.webpages/3.2.3/microsoft.aspnet.webpages.3.2.3.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/3.1.4/microsoft.aspnetcore.authentication.jwtbearer.3.1.4.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnetcore.authorization/1.1.0/microsoft.aspnetcore.authorization.1.1.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.aspnetcore.hosting.abstractions/1.1.0/microsoft.aspnetcore.hosting.abstractions.1.1.0.nupkg.sha512",
@@ -40,12 +46,12 @@
     "/Users/mac/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.dotnet.platformabstractions/2.1.0/microsoft.dotnet.platformabstractions.2.1.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "/Users/mac/.nuget/packages/microsoft.extensions.configuration.abstractions/1.1.0/microsoft.extensions.configuration.abstractions.1.1.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.extensions.configuration.abstractions/2.0.0/microsoft.extensions.configuration.abstractions.2.0.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.extensions.dependencyinjection/2.1.0/microsoft.extensions.dependencyinjection.2.1.0.nupkg.sha512",
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.extensions.dependencyinjection.abstractions/2.1.1/microsoft.extensions.dependencyinjection.abstractions.2.1.1.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.extensions.dependencymodel/2.1.0/microsoft.extensions.dependencymodel.2.1.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.extensions.fileproviders.abstractions/1.1.0/microsoft.extensions.fileproviders.abstractions.1.1.0.nupkg.sha512",
-    "/Users/mac/.nuget/packages/microsoft.extensions.logging.abstractions/1.1.0/microsoft.extensions.logging.abstractions.1.1.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/microsoft.extensions.logging.abstractions/2.0.0/microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.extensions.objectpool/1.1.0/microsoft.extensions.objectpool.1.1.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/microsoft.extensions.options/1.1.0/microsoft.extensions.options.1.1.0.nupkg.sha512",
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/microsoft.extensions.platformabstractions/1.1.0/microsoft.extensions.platformabstractions.1.1.0.nupkg.sha512",
@@ -167,12 +173,43 @@
     "/Users/mac/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/system.threading.tasks.extensions/4.3.0/system.threading.tasks.extensions.4.3.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/system.threading.timer/4.3.0/system.threading.timer.4.3.0.nupkg.sha512",
+    "/Users/mac/.nuget/packages/system.web.mvc.expressions/1.0.6/system.web.mvc.expressions.1.0.6.nupkg.sha512",
     "/Users/mac/.nuget/packages/system.windows.extensions/5.0.0/system.windows.extensions.5.0.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
     "/Users/mac/.nuget/packages/webactivatorex/2.0.0/webactivatorex.2.0.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: AWSSDK.Extensions.NETCore.Setup 3.3.101 requires AWSSDK.Core (>= 3.3.100 && < 3.6.0) but version AWSSDK.Core 3.7.3.26 was resolved.",
+      "libraryId": "AWSSDK.Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Mvc 5.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Mvc",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Razor 3.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Razor",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",
@@ -207,6 +244,16 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebPages 3.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebPages",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
       "message": "Package 'Microsoft.Net.Http 2.0.20710' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.Net.Http",
       "targetGraphs": [
@@ -229,6 +276,16 @@
       "warningLevel": 1,
       "message": "Package 'Swashbuckle.Core 5.6.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "Swashbuckle.Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Web.Mvc.Expressions 1.0.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "System.Web.Mvc.Expressions",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

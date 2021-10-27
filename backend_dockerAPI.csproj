@@ -3,6 +3,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="AWSSDK.Core" Version="3.7.3.26" />
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.101" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.3.19" />
     <PackageReference Include="EM.UsingSwagger" Version="1.0.8" />
     <PackageReference Include="JWT" Version="8.4.2" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.13.1" />
@@ -14,6 +17,7 @@
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
     <PackageReference Include="AspNetCore.Mvc.HttpActionResults" Version="0.3.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+    <PackageReference Include="System.Web.Mvc.Expressions" Version="1.0.6" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Results\" />

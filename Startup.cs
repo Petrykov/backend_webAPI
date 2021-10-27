@@ -9,6 +9,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
 using Microsoft.AspNetCore.Http;
+using backend_dockerAPI.Configurations;
+using backend_dockerAPI.Helpers;
+using Amazon.S3;
 
 // `databaseName` field in appsettings.json
 //  TestingDatabase (to run Integration tests), AcvancedAppDevelopment (to run tests on production database),
@@ -20,17 +23,25 @@ namespace backend_dockerAPI
         {
             Configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; private set;}
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+        public IConfiguration Configuration { get; private set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IMongoClient, MongoClient> (s => 
-            {
-                var uri = s.GetRequiredService<IConfiguration>()["MongoUri"];
-                return new MongoClient(uri);
-            });
+
+            var appSettingsSection = Configuration.GetSection("ServiceConfiguration");
+
+            services.AddAWSService<IAmazonS3>();
+            services.Configure<ServiceConfiguration>(appSettingsSection);
+            services.AddTransient<IAWSS3FileService, AWSS3FileService>();
+            services.AddTransient<IAWSS3BucketHelper, AWSS3BucketHelper>();
+
+            services.AddSingleton<IMongoClient, MongoClient>(s =>
+           {
+               var uri = s.GetRequiredService<IConfiguration>()["MongoUri"];
+               return new MongoClient(uri);
+           });
 
             services.AddOptions<string>("optionsAccessor.CurrentValue");
 
@@ -41,7 +52,7 @@ namespace backend_dockerAPI
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(x => 
+            }).AddJwtBearer(x =>
             {
                 x.RequireHttpsMetadata = false;
                 x.SaveToken = true;
@@ -54,6 +65,16 @@ namespace backend_dockerAPI
                 };
             });
 
+            services.AddCors(options =>
+           {
+               options.AddPolicy(name: MyAllowSpecificOrigins, builder =>
+               builder
+               .AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader());
+                // .AllowCredentials());  
+            });
+
             //services.Configure<TestingDatabaseConfiguration>(Configuration.GetSection("testingDatabase"));
 
             services.AddScoped<DeveloperService>();
@@ -64,7 +85,6 @@ namespace backend_dockerAPI
             services.AddScoped<SolvedQuizService>();
             services.AddControllers().AddNewtonsoftJson();
             services.AddControllers();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -77,7 +97,7 @@ namespace backend_dockerAPI
             }
 
             app.UseStaticFiles();
-
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>

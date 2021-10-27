@@ -41,6 +41,18 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AWSSDK.Core": {
+              "target": "Package",
+              "version": "[3.7.3.26, )"
+            },
+            "AWSSDK.Extensions.NETCore.Setup": {
+              "target": "Package",
+              "version": "[3.3.101, )"
+            },
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.7.3.19, )"
+            },
             "AspNetCore.Mvc.HttpActionResults": {
               "target": "Package",
               "version": "[0.3.0, )"
@@ -84,6 +96,10 @@
             "System.Net.Http": {
               "target": "Package",
               "version": "[4.3.4, )"
+            },
+            "System.Web.Mvc.Expressions": {
+              "target": "Package",
+              "version": "[1.0.6, )"
             }
           },
           "imports": [
