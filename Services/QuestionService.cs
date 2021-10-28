@@ -1,7 +1,6 @@
 
 using System.Collections.Generic;
 using backend_dockerAPI.Models;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
 

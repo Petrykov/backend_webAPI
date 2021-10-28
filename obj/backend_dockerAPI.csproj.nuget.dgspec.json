@@ -43,31 +43,23 @@
           "dependencies": {
             "AWSSDK.Core": {
               "target": "Package",
-              "version": "[3.7.3.26, )"
+              "version": "[3.7.3.27, )"
             },
             "AWSSDK.Extensions.NETCore.Setup": {
               "target": "Package",
-              "version": "[3.3.101, )"
+              "version": "[3.7.1, )"
             },
             "AWSSDK.S3": {
               "target": "Package",
               "version": "[3.7.3.19, )"
             },
-            "AspNetCore.Mvc.HttpActionResults": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[0.3.0, )"
-            },
-            "EM.UsingSwagger": {
-              "target": "Package",
-              "version": "[1.0.8, )"
-            },
-            "JWT": {
-              "target": "Package",
-              "version": "[8.4.2, )"
+              "version": "[3.1.15, )"
             },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
@@ -77,29 +69,9 @@
               "target": "Package",
               "version": "[2.13.2, )"
             },
-            "Swashbuckle": {
-              "target": "Package",
-              "version": "[5.6.0, )"
-            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
-            },
-            "System.Configuration.ConfigurationManager": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "System.IdentityModel.Tokens.Jwt": {
-              "target": "Package",
-              "version": "[6.13.1, )"
-            },
-            "System.Net.Http": {
-              "target": "Package",
-              "version": "[4.3.4, )"
-            },
-            "System.Web.Mvc.Expressions": {
-              "target": "Package",
-              "version": "[1.0.6, )"
             }
           },
           "imports": [

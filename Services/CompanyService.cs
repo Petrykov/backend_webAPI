@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Configuration;
 using backend_dockerAPI.Models;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;

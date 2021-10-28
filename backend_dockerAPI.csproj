@@ -3,35 +3,37 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="AWSSDK.Core" Version="3.7.3.26" />
-    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.101" />
-    <PackageReference Include="AWSSDK.S3" Version="3.7.3.19" />
-    <PackageReference Include="EM.UsingSwagger" Version="1.0.8" />
-    <PackageReference Include="JWT" Version="8.4.2" />
-    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.13.1" />
-    <PackageReference Include="MongoDB.Driver" Version="2.13.2" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.13.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-    <PackageReference Include="Swashbuckle" Version="5.6.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.0" />
-    <PackageReference Include="System.Net.Http" Version="4.3.4" />
-    <PackageReference Include="AspNetCore.Mvc.HttpActionResults" Version="0.3.0" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
-    <PackageReference Include="System.Web.Mvc.Expressions" Version="1.0.6" />
+    
   </ItemGroup>
   <ItemGroup>
     <None Remove="Results\" />
     <None Remove="Swashbuckle.AspNetCore" />
     <None Remove="Swashbuckle" />
     <None Remove="WebActivatorEx" />
-    <None Remove="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
     <None Remove="System.Net.Http" />
     <None Remove="AspNetCore.Mvc.HttpActionResults" />
     <None Remove="System.Configuration.ConfigurationManager" />
     <None Remove="Configurations\" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="AWSSDK.Core" />
+    <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <None Remove="Microsoft.IdentityModel.Tokens" />
+    <None Remove="MongoDB.Driver" />
+    <None Remove="AWSSDK.S3" />
+    <None Remove="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Results\" />
     <Folder Include="Configurations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Core" Version="3.7.3.27" />
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.15" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.13.1" />
+    <PackageReference Include="MongoDB.Driver" Version="2.13.2" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.3.19" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.10" />
   </ItemGroup>
 </Project>

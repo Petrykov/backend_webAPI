@@ -15,7 +15,7 @@ namespace backend_dockerAPI.Models
         public string Name { get; set; }
         public string RequiredStack { get; set; }
         [Required]
-        public int duration { get; set; }
+        public int Duration { get; set; }
         [Required]
         public string[] QuestionIds { get; set; }
         public int Complexity { get; set; }
@@ -25,7 +25,7 @@ namespace backend_dockerAPI.Models
             CreatorId = creatorId;
             Name = name;
             RequiredStack = requiredStack;
-            this.duration = duration;
+            Duration = duration;
             QuestionIds = questionIds;
             Complexity = complexity;
         }

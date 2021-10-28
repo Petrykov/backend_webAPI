@@ -1,12 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Configuration;
-using backend_dockerAPI.Configurations;
 using backend_dockerAPI.Models;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Protocols;
 using MongoDB.Driver;
 
 namespace backend_dockerAPI.Services

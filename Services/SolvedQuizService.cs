@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Configuration;
 using backend_dockerAPI.Models;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Bson;
@@ -26,8 +24,6 @@ namespace backend_dockerAPI.Services
         {
             var filter = Builders<BsonDocument>.Filter.Eq("_id", ObjectId.Parse(solvedQuiz.SolvedBy));
             var update = Builders<BsonDocument>.Update.Push("SolvedQuizzesIds", solvedQuiz.SolvedQuizId);
-            //var update = Builders<BsonDocument>.Update.Set("SolvedQuizzesIds", new string[] { solvedQuiz.SolvedQuizId });
-
             developers.UpdateOne(filter, update);
             solvedQuizzes.InsertOne(solvedQuiz);
             return solvedQuiz;

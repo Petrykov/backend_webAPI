@@ -8,7 +8,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
-using Microsoft.AspNetCore.Http;
 using backend_dockerAPI.Configurations;
 using backend_dockerAPI.Helpers;
 using Amazon.S3;
@@ -19,12 +18,12 @@ namespace backend_dockerAPI
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; private set; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
         readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-        public IConfiguration Configuration { get; private set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -38,14 +37,14 @@ namespace backend_dockerAPI
             services.AddTransient<IAWSS3BucketHelper, AWSS3BucketHelper>();
 
             services.AddSingleton<IMongoClient, MongoClient>(s =>
-           {
-               var uri = s.GetRequiredService<IConfiguration>()["MongoUri"];
-               return new MongoClient(uri);
-           });
+            {
+                var uri = s.GetRequiredService<IConfiguration>()["MongoUri"];
+                return new MongoClient(uri);
+            });
 
             services.AddOptions<string>("optionsAccessor.CurrentValue");
 
-            // Register the Swagger generator, defining 1 or more Swagger documents
+            // Register the Swagger generator
             services.AddSwaggerGen();
 
             services.AddAuthentication(x =>
@@ -66,13 +65,12 @@ namespace backend_dockerAPI
             });
 
             services.AddCors(options =>
-           {
-               options.AddPolicy(name: MyAllowSpecificOrigins, builder =>
-               builder
-               .AllowAnyOrigin()
-               .AllowAnyMethod()
-               .AllowAnyHeader());
-                // .AllowCredentials());  
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins, builder =>
+                builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
             });
 
             //services.Configure<TestingDatabaseConfiguration>(Configuration.GetSection("testingDatabase"));
@@ -98,7 +96,6 @@ namespace backend_dockerAPI
 
             app.UseStaticFiles();
             app.UseCors(MyAllowSpecificOrigins);
-
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
@@ -106,17 +103,11 @@ namespace backend_dockerAPI
                 c.RoutePrefix = string.Empty;
             });
 
-
             app.UseRouting();
-
             app.UseHttpsRedirection();
-
-
             app.UseRouting();
-
             app.UseAuthentication();
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
