@@ -10,6 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
 using backend_dockerAPI.Configurations;
 using backend_dockerAPI.Helpers;
+using Microsoft.AspNetCore.Http;
 using Amazon.S3;
 
 // `databaseName` field in appsettings.json
@@ -95,7 +96,9 @@ namespace backend_dockerAPI
             }
 
             app.UseStaticFiles();
+
             app.UseCors(MyAllowSpecificOrigins);
+
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
@@ -105,9 +108,10 @@ namespace backend_dockerAPI
 
             app.UseRouting();
             app.UseHttpsRedirection();
-            app.UseRouting();
+
             app.UseAuthentication();
             app.UseAuthorization();
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
