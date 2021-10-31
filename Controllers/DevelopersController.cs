@@ -44,6 +44,7 @@ namespace backend_dockerAPI.Controllers
         }
 
         [HttpPut("{id:length(24)}")]
+        [Authorize]
         public ActionResult<Developer> ChangeDeveloper(string id, Developer developer)
         {
             try

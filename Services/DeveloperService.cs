@@ -47,7 +47,13 @@ namespace backend_dockerAPI.Services
             {
                 if (dynData[item].Value != null)
                 {
-                    existing.GetType().GetProperty(item).SetValue(existing, dynData[item].Value);
+                    if (item == "Password")
+                    {
+                        var hashedPassword = passwordEncryption.HashPassword(dynData[item].Value);
+                        existing.GetType().GetProperty(item).SetValue(existing, hashedPassword);
+                    }else{
+                        existing.GetType().GetProperty(item).SetValue(existing, dynData[item].Value);
+                    }
                 }
             }
             return existing;
