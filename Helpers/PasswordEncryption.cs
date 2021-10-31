@@ -1,6 +1,8 @@
 using System;
 using System.Security.Cryptography;
 
+// This class is responsible for the encryption processes 
+// Allows to call HashPassword method which returns encrypted password
 namespace backend_dockerAPI.Helpers
 {
     public class PasswordEncryption

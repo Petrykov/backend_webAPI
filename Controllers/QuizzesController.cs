@@ -32,7 +32,7 @@ namespace backend_dockerAPI.Controllers
             }
         }
 
-        [HttpGet("{id:length(24)}")]
+        [HttpGet("{id}")]
         public ActionResult<Quiz> GetQuiz(string id)
         {
             var quiz = service.GetQuiz(id);

@@ -18,6 +18,7 @@ namespace backend_dockerAPI.Controllers
             service = _service;
         }
 
+        // Action returns a list of all available companies in DB
         [HttpGet]
         [Authorize]
         public ActionResult<List<Company>> GetCompanies()
@@ -32,11 +33,19 @@ namespace backend_dockerAPI.Controllers
             }
         }
 
-        [HttpGet("{id:length(24)}")]
+        // Specifying company/{id} an id field in url
+        // Returns a single object of Company model if exists by id
+        [HttpGet("{id}")]
         [Authorize]
         public ActionResult<Company> GetCompany(string id)
         {
-            var company = service.GetCompany(id);
+            Company company = null;
+
+            if (id.ToString().Length == 24)
+            {
+                company = service.GetCompany(id);
+            }
+
             if (company == null)
             {
                 return BadRequest("Company with id [" + id + "] does not exists.");
@@ -44,6 +53,8 @@ namespace backend_dockerAPI.Controllers
             return company;
         }
 
+        // Creating a new Company object 
+        // Request body fields of a new client (email, password)
         [HttpPost]
         public ActionResult<Company> Create(Company company)
         {

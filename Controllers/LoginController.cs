@@ -2,6 +2,8 @@
 using backend_web_api.Models;
 using Microsoft.AspNetCore.Mvc;
 
+// The main purpose of this controller is to authenticate 
+// the client that wants to log-in to the system
 namespace backend_dockerAPI.Controllers
 {
     [Route("api/[controller]")]

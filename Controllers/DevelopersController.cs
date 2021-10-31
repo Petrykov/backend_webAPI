@@ -18,6 +18,7 @@ namespace backend_dockerAPI.Controllers
             service = _service;
         }
 
+        // Action returns a list of all available developers in DB
         [HttpGet]
         [Authorize]
         public ActionResult<List<Developer>> GetDevelopers()
@@ -32,10 +33,18 @@ namespace backend_dockerAPI.Controllers
             }
         }
 
-        [HttpGet("{id:length(24)}")]
+        // Specifying developers/{id} an id field in url
+        // Returns a single object of Developer model if exists by id
+        [HttpGet("{id}")]
         public ActionResult<Developer> GetDeveloper(string id)
         {
-            var developer = service.GetDeveloper(id);
+            Developer developer = null;
+
+            if (id.ToString().Length == 24)
+            {
+                developer = service.GetDeveloper(id);
+            }
+
             if (developer == null)
             {
                 return BadRequest("Developer with id [" + id + "] does not exists.");
@@ -43,7 +52,11 @@ namespace backend_dockerAPI.Controllers
             return Json(developer);
         }
 
-        [HttpPut("{id:length(24)}")]
+
+        // Specifying developers/{id} an id field in url
+        // Request body with the fields of the model that must be changed
+        // Returns an update object with new fields     
+        [HttpPut("{id}")]
         [Authorize]
         public ActionResult<Developer> ChangeDeveloper(string id, Developer developer)
         {
@@ -59,6 +72,8 @@ namespace backend_dockerAPI.Controllers
 
         }
 
+        // Creating a new Developer object 
+        // Request body fields of a new client (email, password)
         [HttpPost]
         public ActionResult<Developer> Create(Developer developer)
         {

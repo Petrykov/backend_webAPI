@@ -6,6 +6,8 @@ using Amazon.S3.Model;
 using backend_dockerAPI.Configurations;
 using Microsoft.Extensions.Options;
 
+// This class is responsible for file handling processes
+// Using an appropriate functions there is an ability to upload, get, delete files
 namespace backend_dockerAPI.Helpers
 {
     public interface IAWSS3BucketHelper  

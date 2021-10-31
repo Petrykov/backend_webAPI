@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
+// This image controller works perfectly locally 
+// Documentation refferences to this issue (Chapter 10)
 namespace backend_dockerAPI.Controllers
 {
     [Route("api/[controller]")]
