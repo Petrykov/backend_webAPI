@@ -104,6 +104,10 @@ namespace backend_dockerAPI.Services
             var developer = developers.Find(x => x.Email == email).FirstOrDefault();
             var company = companies.Find(x => x.Email == email).FirstOrDefault();
             var isCorrectPassword = false;
+
+            if (developer == null && company == null)
+                return null;
+
             if (developer != null)
             {
                 isCorrectPassword = VerifyHashedPassword(developer.Password, password);
@@ -112,10 +116,8 @@ namespace backend_dockerAPI.Services
             {
                 isCorrectPassword = VerifyHashedPassword(company.Password, password);
             }
-            if(isCorrectPassword == false) return null;
 
-            if (developer == null && company == null)
-                return null;
+            if (isCorrectPassword == false) return null;
 
             var tokenHandler = new JwtSecurityTokenHandler();
 
