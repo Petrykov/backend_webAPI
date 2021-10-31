@@ -12,6 +12,7 @@ using backend_dockerAPI.Configurations;
 using backend_dockerAPI.Helpers;
 using Microsoft.AspNetCore.Http;
 using Amazon.S3;
+using Microsoft.AspNetCore.Mvc;
 
 // `databaseName` field in appsettings.json
 //  TestingDatabase (to run Integration tests), AcvancedAppDevelopment (to run tests on production database),
@@ -29,13 +30,14 @@ namespace backend_dockerAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             var appSettingsSection = Configuration.GetSection("ServiceConfiguration");
 
             services.AddAWSService<IAmazonS3>();
             services.Configure<ServiceConfiguration>(appSettingsSection);
             services.AddTransient<IAWSS3FileService, AWSS3FileService>();
             services.AddTransient<IAWSS3BucketHelper, AWSS3BucketHelper>();
+
+
 
             services.AddSingleton<IMongoClient, MongoClient>(s =>
             {
@@ -74,6 +76,7 @@ namespace backend_dockerAPI
                 .AllowAnyHeader());
             });
 
+
             //services.Configure<TestingDatabaseConfiguration>(Configuration.GetSection("testingDatabase"));
 
             services.AddScoped<DeveloperService>();
@@ -83,7 +86,6 @@ namespace backend_dockerAPI
             services.AddScoped<QuestionService>();
             services.AddScoped<SolvedQuizService>();
             services.AddControllers().AddNewtonsoftJson();
-            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -111,7 +113,7 @@ namespace backend_dockerAPI
 
             app.UseAuthentication();
             app.UseAuthorization();
-            
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

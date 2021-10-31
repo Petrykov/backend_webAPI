@@ -1,15 +1,22 @@
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using backend_dockerAPI.Models;
+using backend_dockerAPI.Helpers;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using Newtonsoft.Json;
+using System.Data;
+using System.Linq;
+using Newtonsoft.Json.Linq;
 
 namespace backend_dockerAPI.Services
 {
     public class DeveloperService
     {
         private readonly IMongoCollection<Developer> developers;
+        PasswordEncryption passwordEncryption = new PasswordEncryption();
         public DeveloperService(IMongoClient client, IConfiguration configuration)
         {
             var database = client.GetDatabase(configuration.GetValue<string>("databaseName"));
@@ -22,45 +29,39 @@ namespace backend_dockerAPI.Services
 
         public Developer ChangeDeveloper(string id, Developer developer)
         {
-            var existingDeveloper = developers.Find<Developer>(developer => developer.Id == id).FirstOrDefault();
+            Developer existingDeveloper = developers.Find<Developer>(developer => developer.Id == id).FirstOrDefault();
 
-            if (developer.Password != null) { existingDeveloper.Password = developer.Password; }
-            if (developer.Name != null) { existingDeveloper.Name = developer.Name; }
-            if (developer.Img != null) { existingDeveloper.Img = developer.Img; }
-            if (developer.PhoneNumber != null) { existingDeveloper.PhoneNumber = developer.PhoneNumber; }
-            if (developer.City != null) { existingDeveloper.City = developer.City; }
-            if (developer.Description != null) { existingDeveloper.Description = developer.Description; }
-            if (developer.OccupationField != null) { existingDeveloper.OccupationField = developer.OccupationField; }
+            string[] developerFields = new string[] { "Password", "Name", "Img", "PhoneNumber", "City", "Description", "OccupationField" };
 
-            developers.ReplaceOne(developer => developer.Id == id, existingDeveloper);
+            Developer changedDeveloper = checkFields(existingDeveloper, developer, developerFields);
+            developers.ReplaceOne(developer => developer.Id == id, changedDeveloper);
 
-            return existingDeveloper;
+            return changedDeveloper;
+        }
+
+        private Developer checkFields(Developer existing, Developer requestBody, string[] array)
+        {
+            dynamic dynData = JsonConvert.DeserializeObject(requestBody.ToJson());
+
+            foreach (var item in array)
+            {
+                if (dynData[item].Value != null)
+                {
+                    existing.GetType().GetProperty(item).SetValue(existing, dynData[item].Value);
+                }
+            }
+            return existing;
         }
 
         public Developer Create(Developer developer)
         {
             var newDeveloer = developer;
 
-            var hashedPassword = EncodePasswordToBase64(developer.Password);
+            var hashedPassword = passwordEncryption.HashPassword(developer.Password);
             newDeveloer.Password = hashedPassword;
 
             developers.InsertOne(newDeveloer);
             return newDeveloer;
-        }
-
-        public static string EncodePasswordToBase64(string password)
-        {
-            try
-            {
-                byte[] encData_byte = new byte[password.Length];
-                encData_byte = System.Text.Encoding.UTF8.GetBytes(password);
-                string encodedData = Convert.ToBase64String(encData_byte);
-                return encodedData;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error in base64Encode" + ex.Message);
-            }
         }
     }
 }

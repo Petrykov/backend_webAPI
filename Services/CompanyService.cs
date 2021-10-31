@@ -1,6 +1,6 @@
-using System;
 using System.Collections.Generic;
 using backend_dockerAPI.Models;
+using backend_dockerAPI.Helpers;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
 
@@ -9,6 +9,8 @@ namespace backend_dockerAPI.Services
     public class CompanyService
     {
         private readonly IMongoCollection<Company> companies;
+
+        PasswordEncryption passwordEncryption = new PasswordEncryption();
 
         public CompanyService(IMongoClient client, IConfiguration configuration)
         {
@@ -24,25 +26,11 @@ namespace backend_dockerAPI.Services
         {
             var newCompany = company;
 
-            var hashedPassword = EncodePasswordToBase64(company.Password);
+            var hashedPassword = passwordEncryption.HashPassword(company.Password);
             newCompany.Password = hashedPassword;
 
             companies.InsertOne(newCompany);
             return newCompany;
-        }
-        public static string EncodePasswordToBase64(string password)
-        {
-            try
-            {
-                byte[] encData_byte = new byte[password.Length];
-                encData_byte = System.Text.Encoding.UTF8.GetBytes(password);
-                string encodedData = Convert.ToBase64String(encData_byte);
-                return encodedData;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error in base64Encode" + ex.Message);
-            }
         }
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using Newtonsoft.Json;
 
 namespace backend_dockerAPI.Models
 {
+    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class Quiz
     {
         [BsonId]

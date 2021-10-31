@@ -1,6 +1,7 @@
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using backend_dockerAPI.Models;
 using backend_web_api.Models;
@@ -15,6 +16,10 @@ namespace backend_dockerAPI.Services
         private readonly IMongoCollection<Developer> developers;
         private readonly IMongoCollection<Company> companies;
         private readonly string key;
+
+        private const int SaltByteSize = 24;
+        private const int HashByteSize = 24;
+        private const int HasingIterationsCount = 10101;
 
         public LoginService(IMongoClient client, IConfiguration configuration)
         {
@@ -47,26 +52,67 @@ namespace backend_dockerAPI.Services
             return companies.Find(x => x.Email == email).FirstOrDefault();
         }
 
-        public static string EncodePasswordToBase64(string password)
+        public static bool VerifyHashedPassword(string hashedPassword, string password)
         {
-            try
+            byte[] _passwordHashBytes;
+
+            int _arrayLen = (SaltByteSize + HashByteSize) + 1;
+
+            if (hashedPassword == null)
             {
-                byte[] encData_byte = new byte[password.Length];
-                encData_byte = System.Text.Encoding.UTF8.GetBytes(password);
-                string encodedData = Convert.ToBase64String(encData_byte);
-                return encodedData;
+                return false;
             }
-            catch (Exception ex)
+
+            if (password == null)
             {
-                throw new Exception("Error in base64Encode" + ex.Message);
+                throw new ArgumentNullException("password");
             }
+
+            byte[] src = Convert.FromBase64String(hashedPassword);
+
+            if ((src.Length != _arrayLen) || (src[0] != 0))
+            {
+                return false;
+            }
+
+            byte[] _currentSaltBytes = new byte[SaltByteSize];
+            Buffer.BlockCopy(src, 1, _currentSaltBytes, 0, SaltByteSize);
+
+            byte[] _currentHashBytes = new byte[HashByteSize];
+            Buffer.BlockCopy(src, SaltByteSize + 1, _currentHashBytes, 0, HashByteSize);
+
+            using (Rfc2898DeriveBytes bytes = new Rfc2898DeriveBytes(password, _currentSaltBytes, HasingIterationsCount))
+            {
+                _passwordHashBytes = bytes.GetBytes(SaltByteSize);
+            }
+
+            return AreHashesEqual(_currentHashBytes, _passwordHashBytes);
+
+        }
+
+        private static bool AreHashesEqual(byte[] firstHash, byte[] secondHash)
+        {
+            int _minHashLength = firstHash.Length <= secondHash.Length ? firstHash.Length : secondHash.Length;
+            var xor = firstHash.Length ^ secondHash.Length;
+            for (int i = 0; i < _minHashLength; i++)
+                xor |= firstHash[i] ^ secondHash[i];
+            return 0 == xor;
         }
 
         public string Authenticate(string email, string password)
         {
-            var encodedInput = EncodePasswordToBase64(password);
-            var developer = developers.Find(x => x.Email == email && x.Password == encodedInput).FirstOrDefault();
-            var company = companies.Find(x => x.Email == email && x.Password == encodedInput).FirstOrDefault();
+            var developer = developers.Find(x => x.Email == email).FirstOrDefault();
+            var company = companies.Find(x => x.Email == email).FirstOrDefault();
+            var isCorrectPassword = false;
+            if (developer != null)
+            {
+                isCorrectPassword = VerifyHashedPassword(developer.Password, password);
+            }
+            else
+            {
+                isCorrectPassword = VerifyHashedPassword(company.Password, password);
+            }
+            if(isCorrectPassword == false) return null;
 
             if (developer == null && company == null)
                 return null;

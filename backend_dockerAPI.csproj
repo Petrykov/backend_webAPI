@@ -21,6 +21,8 @@
     <None Remove="MongoDB.Driver" />
     <None Remove="AWSSDK.S3" />
     <None Remove="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+    <None Remove="WebApiContrib.Formatting.JavaScriptSerializer" />
+    <None Remove="Vse.Web.Serialization.ControlledSerializationJsonConverter" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Results\" />

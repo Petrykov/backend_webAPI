@@ -44,7 +44,6 @@ namespace backend_dockerAPI.Controllers
         }
 
         [HttpPut("{id:length(24)}")]
-        [Authorize]
         public ActionResult<Developer> ChangeDeveloper(string id, Developer developer)
         {
             try
@@ -53,6 +52,7 @@ namespace backend_dockerAPI.Controllers
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex);
                 throw new Exception(ex.Message);
             }
 

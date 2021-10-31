@@ -1,7 +1,9 @@
 ﻿using backend_web_api.Models;
+using Newtonsoft.Json;
 
 namespace backend_dockerAPI.Models
 {
+    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
     public class Developer : Client
     {
         public string [] SolvedQuizzesIds { get; set; }
