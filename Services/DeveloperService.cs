@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using backend_dockerAPI.Models;
 using Microsoft.Extensions.Configuration;
+using MongoDB.Bson;
 using MongoDB.Driver;
 
 namespace backend_dockerAPI.Services
@@ -38,9 +39,13 @@ namespace backend_dockerAPI.Services
 
         public Developer Create(Developer developer)
         {
-            developer.Password = EncodePasswordToBase64(developer.Password);
-            developers.InsertOne(developer);
-            return developer;
+            var newDeveloer = developer;
+
+            var hashedPassword = EncodePasswordToBase64(developer.Password);
+            newDeveloer.Password = hashedPassword;
+
+            developers.InsertOne(newDeveloer);
+            return newDeveloer;
         }
 
         public static string EncodePasswordToBase64(string password)
